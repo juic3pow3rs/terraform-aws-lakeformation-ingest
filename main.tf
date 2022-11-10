@@ -1,7 +1,7 @@
 locals {
   location         = "eu-central-1"
   environment      = "dev"
-  project          = "db"
+  project          = "ws2223"
   template_version = "0.0.1"
   team             = "andizzo"
   role             = "cloud01"
