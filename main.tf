@@ -32,10 +32,10 @@ module "lakeformation" {
   }
 
   admin_user_arn = data.aws_caller_identity.current.arn
-  s3_bucket_arn = module.s3_bucket.bucket_arn
+  s3_bucket_arn  = module.s3_bucket.bucket_arn
   s3_bucket_name = module.s3_bucket.bucket_name
-  file_name = "demoLakeData.csv"
-  file_source = "./demoLakeData.csv"
+  file_name      = "demoLakeData.csv"
+  file_source    = "./demoLakeData.csv"
 
   environment      = local.environment
   role             = local.role
@@ -51,8 +51,8 @@ module "glue_catalog" {
   }
 
   s3_bucket_name = module.s3_bucket.bucket_name
-  file_name = "demoLakeData.csv"
-  folder_path = "bronze/ingestion"
+  file_name      = "demoLakeData.csv"
+  folder_path    = "bronze/ingestion"
 
   environment      = local.environment
   role             = local.role
